@@ -12,10 +12,10 @@ SELECT
 FROM lendingclub.loan_portfolio_clean;
 
 
--- Monthly trend KPIs
+-- Monthly trend KPIs (uses a real DATE field for time series charts)
 CREATE OR REPLACE VIEW lendingclub.v_monthly_trends AS
 SELECT
-  issue_month,
+  DATE_TRUNC(issue_date, MONTH) AS issue_month,
   COUNT(*) AS loans_issued,
   SUM(loan_amnt) AS amount_issued,
   SAFE_DIVIDE(SUM(is_default), COUNT(*)) AS default_rate,
@@ -23,6 +23,7 @@ SELECT
 FROM lendingclub.loan_portfolio_clean
 GROUP BY issue_month
 ORDER BY issue_month;
+
 
 
 -- Default rate by grade
