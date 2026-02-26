@@ -1,6 +1,8 @@
 # Credit Risk Portfolio Monitoring Dashboard
 ### Lending Club Loan Book Analysis (2007–2018)
 
+Link to dashboard: https://lookerstudio.google.com/reporting/ee6d2094-5908-404d-b453-d9917fa6d826
+
 #### Business Context
 
 This project simulates a credit risk monitoring dashboard used by a lending institution to oversee portfolio performance and identify emerging risk exposure.
